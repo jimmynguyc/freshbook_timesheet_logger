@@ -35,6 +35,8 @@ class TimesheetLogger
     items = CONFIG[date.strftime('%a')]
     return unless items
 
+    puts "Logging for #{date.strftime}"
+    puts "============================"
     visit "#{ENV['FRESHBOOK_URL']}timesheet#date/#{date.strftime}"
 
     unless page.find('.timesheet-entry-table').has_content?('No hours logged on')
@@ -44,6 +46,7 @@ class TimesheetLogger
 
     items.each do |item|
       project, task, hours, notes = item
+      printf 'Project: %s, Task: %s, Hours: %s, Notes: %s ...', project, task, hours, notes
 
       select project, from: 'Project'
       select task, from: 'Task'
@@ -53,6 +56,7 @@ class TimesheetLogger
       click_on 'Log Hours'
 
       loop until page.find('.timesheet-entry-table').has_content?(notes)
+      puts "Done"
     end
   end
 end
