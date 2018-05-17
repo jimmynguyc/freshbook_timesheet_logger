@@ -66,8 +66,10 @@ end
 
 3. There's no UNDO button. Make sure you know what you're doing.
 
-4. Pull Requests are welcomed.
+4. Things will break when the UI changes.
 
-## Why are you not using the API
+5. Contributions are welcomed.
+
+## Why are you not using the API?
 Because why use a knife when you have a chainsaw >:)
 
