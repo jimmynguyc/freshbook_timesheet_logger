@@ -2,7 +2,7 @@
 Timesheet logger for lazy people
 
 ## Why use this
-When you're the king of procrasti-nation, there's really a lot of other / better things to do.
+Allows you to timelog in bulk. When you're the king of procrasti-nation, there's really a lot of other / better things to do. 
 
 ## Requirements
 1. Ruby (duh) 
