@@ -48,7 +48,7 @@ CONFIG['Fri'] = []
 ```bash
 bundle exec ruby app.rb # Log today
 DATE=2018-05-15 bundle exec ruby app.rb # Log specific date
-START=2018-05-01 TO=2018-05-31 bundle exec ruby app.rb  # When you procrastinate until the last minute
+FROM=2018-05-01 TO=2018-05-31 bundle exec ruby app.rb  # When you procrastinate until the last minute
 ```
 
 ## Notes
