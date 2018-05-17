@@ -61,3 +61,7 @@ unless page.find('.timesheet-entry-table').has_content?('No hours logged on')
   return
 end
 ```
+
+2. There's no UNDO button. Make sure you know what you're doing.
+
+3. Pull Requests are welcomed.
