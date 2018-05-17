@@ -62,6 +62,8 @@ unless page.find('.timesheet-entry-table').has_content?('No hours logged on')
 end
 ```
 
-2. There's no UNDO button. Make sure you know what you're doing.
+2. This obviously only works if you have a pretty similar work schedule every day of week.
 
-3. Pull Requests are welcomed.
+3. There's no UNDO button. Make sure you know what you're doing.
+
+4. Pull Requests are welcomed.
