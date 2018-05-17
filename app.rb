@@ -17,8 +17,9 @@ class TimesheetLogger
     click_on 'Log in'
     click_on 'Time Tracking'
 
-    start_date = Date.parse(ENV['FROM'] || ENV['DATE'])
-    end_date = Date.parse(ENV['TO'] || ENV['DATE'])
+    today = Date.today.strftime
+    start_date = Date.parse(ENV['FROM'] || ENV['DATE'] || today)
+    end_date = Date.parse(ENV['TO'] || ENV['DATE'] || today)
 
     (start_date..end_date).each do |date|
       enter_for(date)
