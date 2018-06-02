@@ -1,4 +1,4 @@
-CONFIG = {}
+CONFIG = {}.freeze
 
 CONFIG['holidays'] = []
 # CONFIG['holidays'] << 'YYYY-MM-DD'

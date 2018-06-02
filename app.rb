@@ -27,16 +27,20 @@ class TimesheetLogger
   end
 
   def enter_for(date)
+    printf '%s', "Logging for #{date.strftime} --- "
+
     if CONFIG['holidays'].include?(date.strftime)
-      puts "#{date.strftime} is a holiday ~!!"
+      puts 'is a holiday ~!!'
       return
     end
 
     items = CONFIG[date.strftime('%a')]
-    return unless items
+    unless items
+      puts 'Not a workday, skipping'
+      return
+    end
 
-    puts "Logging for #{date.strftime}"
-    puts "============================"
+    puts "\n============================"
     visit "#{ENV['FRESHBOOK_URL']}timesheet#date/#{date.strftime}"
 
     unless page.find('.timesheet-entry-table').has_content?('No hours logged on')
@@ -56,7 +60,7 @@ class TimesheetLogger
       click_on 'Log Hours'
 
       loop until page.find('.timesheet-entry-table').has_content?(notes)
-      puts "Done"
+      puts 'Done'
     end
   end
 end
