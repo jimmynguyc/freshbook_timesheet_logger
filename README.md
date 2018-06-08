@@ -2,10 +2,10 @@
 Timesheet logger for lazy people
 
 ## Why use this
-Allows you to timelog in bulk. When you're the king of procrasti-nation, there's really a lot of other / better things to do. 
+Allows you to timelog in bulk. When you're the king of procrasti-nation, there's really a lot of other / better things to do.
 
 ## Requirements
-1. Ruby (duh) 
+1. Ruby (duh)
 2. Chrome
 
 ## How to use this
@@ -73,3 +73,8 @@ end
 ## Why are you not using the API?
 Because why use a knife when you have a chainsaw >:)
 
+
+
+## License
+
+This project is Licensed under [GLWTPL](https://github.com/me-shaon/GLWTPL)
