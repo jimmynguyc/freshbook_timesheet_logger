@@ -5,7 +5,7 @@ require 'dotenv/load'
 require 'selenium/webdriver'
 require './config'
 
-Capybara.default_driver = :selenium_chrome_headless # :selenium_chrome
+Capybara.default_driver = :selenium_chrome_headless # :selenium_chrome #
 
 class TimesheetLogger
   include Capybara::DSL
@@ -58,8 +58,7 @@ class TimesheetLogger
       fill_in 'Notes', with: notes
 
       click_on 'Log Hours'
-
-      loop until page.find('.timesheet-entry-table').has_content?(notes)
+      loop until page.find('.timesheet-entry-table').has_content?(notes) && (page.all('#log-hours-button').length > 0)
       puts 'Done'
     end
   end
