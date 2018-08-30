@@ -51,7 +51,7 @@ DATE=2018-05-15 bundle exec ruby app.rb # Log specific date
 FROM=2018-05-01 TO=2018-05-31 bundle exec ruby app.rb  # When you procrastinate until the last minute
 ```
 
-## Notes
+## Notes / Known Issues
 
 1. Will only log on a day where there's no existing time logs. Comment out these lines if you wish to ignore :-
 ```ruby
@@ -68,11 +68,15 @@ end
 
 4. Things will break when the UI changes.
 
-5. Contributions are welcomed.
+5. You'll get your login will temporarily blocked if you fire the script too many frequently.
+
+6. Contributions are welcomed.
 
 ## Why are you not using the API?
-Because why use a knife when you have a chainsaw >:)
+Because why use a scalpel when you have a chainsaw >:)
 
+## But seriously .. there's an official API
+If you can't handle the action & excitement, check out the `use-api` branch. But seriously, you're missing all the fun.
 
 
 ## License
