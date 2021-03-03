@@ -76,7 +76,7 @@ end
 Because why use a scalpel when you have a chainsaw >:)
 
 ## But seriously .. there's an official API
-If you can't handle the action & excitement, check out the `use-api` branch. But seriously, you're missing all the fun.
+If you can't handle the action & excitement, check out the `oauth` branch. But seriously, you're missing all the fun.
 
 
 ## License
