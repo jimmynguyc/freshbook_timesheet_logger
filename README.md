@@ -52,7 +52,7 @@ You'll need to do this step when you fetch your oauth token for the first time /
 
 2. Go to https://my.freshbooks.com/#/developer and create / updateyour app
 
-3. Set the `Website URL` and `Redirect URL` to whatever ngrok domain (e.g. https://dab4c1546ef4.ngrok.io)
+3. Set the `Website URL` and `Redirect URL` to the HTTPS ngrok forwarding domain (e.g. https://dab4c1546ef4.ngrok.io)
 
 4. Save and get the Client ID & Secret
 
