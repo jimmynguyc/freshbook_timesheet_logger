@@ -11,12 +11,7 @@ Allows you to timelog in bulk. When you're the king of procrasti-nation, there's
 
 1. `bundle install`
 
-2. Copy `.env.sample` to `.env` and edit its content.
-
-```
-API_URL="https://fixme.freshbooks.com/api/2.1/xml-in"
-AUTHENTICATION_TOKEN="fixme"
-```
+2. Copy `.env.sample` to `.env` and set the `CLIENT_ID` and `CLIENT_SECRET` from your Freshbook App.
 
 3. Copy `config.sample.rb` to `config.rb` and edit its content.
 ```ruby
@@ -49,8 +44,21 @@ DATE=2018-05-15 bundle exec ruby app.rb # Log specific date
 FROM=2018-05-01 TO=2018-05-31 bundle exec ruby app.rb  # When you procrastinate until the last minute
 ```
 
+## Creating / Updating your Freshbook App
+
+You'll need to do this step when you fetch your oauth token for the first time / it expires. Otherwise the app should automatically use your existing token.
+
+1. Start `ngrok http 8080`
+
+2. Go to https://my.freshbooks.com/#/developer and create / updateyour app
+
+3. Set the `Website URL` and `Redirect URL` to whatever ngrok domain (e.g. https://dab4c1546ef4.ngrok.io)
+
+4. Save and get the Client ID & Secret
+
 ## Notes / Known Issues
 
+1. The Capybara method no longer works bcoz we updated to the new UI. 
 1. Contributions are welcomed.
 
 ## API is boring .. is there a better way of doing this?

@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'dotenv'
-gem 'httparty'
-gem 'nokogiri'
+gem 'pry'
+gem 'launchy'
+gem 'thin'
+gem 'oauth2'
+gem 'byebug', require: false

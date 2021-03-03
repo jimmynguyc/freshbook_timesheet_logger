@@ -1,2 +1,6 @@
+.byebug_history
+.ruby-version
 .env
+
 config.rb
+oauth_credentials.json
