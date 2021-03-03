@@ -11,7 +11,7 @@ Allows you to timelog in bulk. When you're the king of procrasti-nation, there's
 
 1. `bundle install`
 
-2. Copy `.env.sample` to `.env` and set the `CLIENT_ID` and `CLIENT_SECRET` from your [Freshbook App](#creating--updating-your-freshbook-app).
+2. Copy `.env.sample` to `.env` and set the `NGROK_URL`, `CLIENT_ID` and `CLIENT_SECRET` from your [Freshbook App](#creating--updating-your-freshbook-app).
 
 3. Copy `config.sample.rb` to `config.rb` and edit its content.
 ```ruby

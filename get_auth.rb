@@ -39,11 +39,11 @@ html
 
     token = nil
     client = oauth_client
-    auth_url = client.auth_code.authorize_url(redirect_uri: "#{ENV.fetch("NGROK_URL")}/oauth/callback")
+    auth_url = client.auth_code.authorize_url(redirect_uri: ENV.fetch("NGROK_URL"))
     server = Thin::Server.new("0.0.0.0", 8080) do
       run lambda { |env|
         req = Rack::Request.new(env)
-        token = client.auth_code.get_token(req[:code], redirect_uri: "https://dab4c1546ef4.ngrok.io/oauth/callback")
+        token = client.auth_code.get_token(req[:code], redirect_uri: ENV.fetch("NGROK_URL"))
         server.stop()
         [200, { "Content-Type" => "text/html" }, response_html]
       }
