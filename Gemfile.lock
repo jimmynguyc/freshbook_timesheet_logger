@@ -18,7 +18,7 @@ GEM
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
     dotenv (2.2.1)
-    ffi (1.9.23)
+    ffi (1.14.2)
     io-like (0.3.0)
     mini_mime (1.0.0)
     mini_portile2 (2.5.0)
